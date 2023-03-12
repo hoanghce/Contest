@@ -71,17 +71,17 @@ if selected == "Dashboard":
     col1, col2, col3 = st.columns(3)
     with col1:
         Finish = len(df1.query("Status == 'Complete'"))
-        st.image('Icon/Finish.png',width=50)
+        st.image('https://github.com/hoanghce/Contest/blob/3e4ecd730764e4393e1864fb90cd0420acebdec6/Icon/Finish.png',width=50)
         st.metric("Finish",Finish,1)
 
     with col2:
         UnComplete = len(df1.query("Status == 'Note Complete'"))
-        st.image('Icon/Warning.png',width=50)
+        st.image('https://github.com/hoanghce/Contest/blob/3e4ecd730764e4393e1864fb90cd0420acebdec6/Icon/Warning.png',width=50)
         st.metric("Unfinished",UnComplete,1)
     
     with col3:
         Running = len(df1.query("Status == 'Running'"))
-        st.image('Icon/Running.png',width=50)
+        st.image('https://github.com/hoanghce/Contest/blob/3e4ecd730764e4393e1864fb90cd0420acebdec6/Icon/Running.png',width=50)
         st.metric("Running",Running,1)
         
     st.markdown("""

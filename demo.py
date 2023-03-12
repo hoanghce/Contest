@@ -6,7 +6,7 @@ from datetime import datetime
 
 Page_Default = 3
 
-df = pd.read_excel("https://github.com/hoanghce/Contest/blob/ed056361f09a038003656c38b88bae914600f712/Test.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/hoanghce/Contest/main/Test.csv")
 def convert_df(df):
     return df.to_csv(index=False).encode('utf-8')
 
@@ -71,17 +71,17 @@ if selected == "Dashboard":
     col1, col2, col3 = st.columns(3)
     with col1:
         Finish = len(df1.query("Status == 'Complete'"))
-        st.image('https://github.com/hoanghce/Contest/blob/3e4ecd730764e4393e1864fb90cd0420acebdec6/Icon/Finish.png',width=50)
+        st.image('https://github.com/hoanghce/Contest/blob/main/Icon/Finish.png?raw=true',width=50)
         st.metric("Finish",Finish,1)
 
     with col2:
         UnComplete = len(df1.query("Status == 'Note Complete'"))
-        st.image('https://github.com/hoanghce/Contest/blob/3e4ecd730764e4393e1864fb90cd0420acebdec6/Icon/Warning.png',width=50)
+        st.image('https://github.com/hoanghce/Contest/blob/main/Icon/Warning.png?raw=true',width=50)
         st.metric("Unfinished",UnComplete,1)
     
     with col3:
         Running = len(df1.query("Status == 'Running'"))
-        st.image('https://github.com/hoanghce/Contest/blob/3e4ecd730764e4393e1864fb90cd0420acebdec6/Icon/Running.png',width=50)
+        st.image('https://github.com/hoanghce/Contest/blob/main/Icon/Running.png?raw=true',width=50)
         st.metric("Running",Running,1)
         
     st.markdown("""
